@@ -7,10 +7,12 @@ class General extends Component {
 
 
     render() {
-        const {name} = this.props
+        const {name, email, phone} = this.props
         return (
             <div>
                 <h1>{name.text}</h1>
+                <p>{email.text}</p>
+                <p>{phone.text}</p>
             </div>
         )
     }

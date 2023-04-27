@@ -6,37 +6,38 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 95vh;
+    gap: 20px;
 }
 
 .forms{
-    border: 1px solid;
     grid-column: 1/2;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 200px 300px 300px;
+    border: 1px solid;
 }
 
 .general-container{
-    border: 1px solid;
     grid-row: 1/2;
-    display: flex;
+    border-bottom: 1px solid;
 }
 
 .edu-container{
-    border: 1px solid;
     grid: 2/3;
+    border-bottom: 1px solid;
+    overflow-y: auto;
 }
 
 .practice-container{
-    border: 1px solid;
     grid: 3/4;
+    overflow-y: auto;
 }
 
 .edu-container,
 .general-container,
 .practice-container{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
 }
 
 .cv{
@@ -48,12 +49,23 @@ body{
     font-size: 25px;
 }
 
+.gen-info,
+.edu-info{
+    border-bottom: 1px solid;
+}
+
+.gen-info,
+.edu-info,
+.pra-info{
+    width: 600px;
+}
+
 form,
 input,
 button{
     font-size: 20px;
 }
 
-.gen-info{
+h1{
     text-transform: uppercase;
 }
