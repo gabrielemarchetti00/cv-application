@@ -1,0 +1,59 @@
+body{
+    margin: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+}
+
+.forms{
+    border: 1px solid;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.general-container{
+    border: 1px solid;
+    grid-row: 1/2;
+    display: flex;
+}
+
+.edu-container{
+    border: 1px solid;
+    grid: 2/3;
+}
+
+.practice-container{
+    border: 1px solid;
+    grid: 3/4;
+}
+
+.edu-container,
+.general-container,
+.practice-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.cv{
+    border: 1px solid;
+    grid-column: 2/3;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+
+form,
+input,
+button{
+    font-size: 20px;
+}
+
+.gen-info{
+    text-transform: uppercase;
+}
