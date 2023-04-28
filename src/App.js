@@ -101,9 +101,23 @@ class App extends Component {
     }
   };
 
-  onClickAddEdu = () => {
-    let newForm = (<div>ciao</div>)
-    console.log(newForm)
+  deleteEdu = () => {
+    this.setState({
+      school: {text: ''},
+      title: {text: ''},
+      sdate: {text: ''},
+      edate: {text: ''},
+    })
+  }
+
+  deleteJob = () => {
+    this.setState({
+      company: {text: ''},
+      position: {text: ''},
+      tasks: {text: ''},
+      sdateJob: {text: ''},
+      edateJob: {text: ''},
+    })
   }
 
   render() {
@@ -147,11 +161,7 @@ class App extends Component {
                   <input type='date' onChange={this.handleChange} value={edate.text} id="edate-input"></input>
               </div>
             </form>
-            <button onClick={this.onClickAddEdu}>Add</button>
-            <button>Delete</button>
-            <div>
-              {this.newForm}
-            </div>
+            <button onClick={this.deleteEdu}>Delete</button>
           </div>
           <div className="practice-container">
             <div><h2>Practice</h2></div>
@@ -175,6 +185,7 @@ class App extends Component {
                   <input type='date' onChange={this.handleChange} value={edateJob.text} id="edate-input-job"></input>
               </div>
             </form>
+            <button onClick={this.deleteJob}>Delete</button>
           </div>
         </div>
         <div className='cv'>
